@@ -21,8 +21,8 @@ Redmine::Plugin.register :progressive_projects_list do
   }, partial: 'settings/progressive_projects_list'
 end
 
-require 'progressive_projects_list'
-require 'progressive/application_helper_patch'
-require 'progressive/projects_helper_patch'
-require 'progressive/projects_list_view_listener'
-require 'progressive/recent_projects_view_listener'
+require File.expand_path('../lib/progressive_projects_list', __FILE__)
+require File.expand_path('../lib/progressive/application_helper_patch', __FILE__)
+require File.expand_path('../lib/progressive/projects_helper_patch', __FILE__)
+require File.expand_path('../lib/progressive/projects_list_view_listener', __FILE__)
+require File.expand_path('../lib/progressive/recent_projects_view_listener', __FILE__)
